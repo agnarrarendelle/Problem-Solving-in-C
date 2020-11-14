@@ -23,6 +23,7 @@ int getNum(int Num){
 
 double calcuNum(double Num){
     Num = (pow(Num, Num))*(exp(- Num))*(sqrt((2 * Num + 1 / 3) * M_PI));
+    return Num;
 }
 
 void displayNum(double result){
