@@ -1,29 +1,31 @@
 #include <stdio.h>
 #include <math.h>
 
-void getNum(double * Num);
-void calcuNum(double * Num);
-void displayNum(double * Num);
+int getNum(int Num);
+double calcuNum(double Num);
+void displayNum(double result);
 
 int main(){
-
-    double Num;
-    getNum(&Num);
-    calcuNum(&Num);
-    displayNum(&Num);
-}
-
-void getNum(double * Num){
+    int Num;
+    double result;
     printf("Please enter your number:");
-    scanf(" %lf", Num);
-    // printf("Num is %lf", *Num);
+
+    Num = getNum(Num);
+    result = calcuNum(Num);
+    displayNum(result);
+
 }
 
-void calcuNum(double * Num){
-
-    *Num = ceil((*Num * 100));
+int getNum(int Num){
+    scanf(" %d", &Num);
+    return Num;
 }
 
-void displayNum(double * Num){
-    printf("Numer is %.0lf\n", *Num);
+double calcuNum(double Num){
+    Num = (pow(Num, Num))*(exp(- Num))*(sqrt((2 * Num + 1 / 3) * M_PI));
+    return Num;
+}
+
+void displayNum(double result){
+    printf("Value is %.6lf\n", result);
 }
