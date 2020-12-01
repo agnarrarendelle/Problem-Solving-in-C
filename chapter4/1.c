@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdlib.h>
+#include <math.h>
 
 double SQRT(int x);
 double improve(double guess, int x);
